@@ -13,5 +13,4 @@ class ActiveFragment: Fragment(R.layout.fragment_active) {
     private val binding get() = _binding!!
     private val viewModel: ActiveViewModel by viewModels()
 
-
 }

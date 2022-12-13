@@ -16,8 +16,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private val binding get() = _binding!!
     private val viewModel: LoginViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    interface NavCallback {
+        fun onLoginClicked(
+            isCorrectLogin: Boolean,
+            isExistingLogin: Boolean
+        )
     }
 
     override fun onCreateView(
@@ -26,8 +29,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onDestroyView() {

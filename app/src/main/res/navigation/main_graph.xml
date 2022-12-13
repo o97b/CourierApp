@@ -3,15 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/activeFragment">
+    <fragment
+        android:id="@+id/activeFragment"
+        android:name="com.example.courierapp.presentation.fragment.active.ActiveFragment"
+        android:label="fragment_active"
+        tools:layout="@layout/fragment_active" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.courierapp.presentation.fragment.history.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
+    <fragment
+        android:id="@+id/historyDetailsFragment"
+        android:name="com.example.courierapp.presentation.fragment.history_details.HistoryDetailsFragment"
+        android:label="HistoryDetailsFragment"
+        tools:layout="@layout/fragment_history_details"/>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.courierapp.presentation.fragment.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
-        android:id="@+id/activeFragment"
-        android:name="com.example.courierapp.presentation.fragment.active.ActiveFragment"
-        android:label="fragment_active"
-        tools:layout="@layout/fragment_active" />
+        android:id="@+id/activeDetailsFragment"
+        android:name="com.example.courierapp.presentation.fragment.active_details.ActiveDetailsFragment"
+        android:label="ActiveDetailsFragment"
+        tools:layout="@layout/fragment_active_details"/>
+    <fragment
+        android:id="@+id/forgotPassFragment"
+        android:name="com.example.courierapp.presentation.fragment.forgot_pass.ForgotPassFragment"
+        android:label="ForgotPassFragment" />
+
+
 </navigation>

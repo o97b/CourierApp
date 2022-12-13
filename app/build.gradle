@@ -18,7 +18,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    buildTypes {
+        debug {
+            buildConfigField "String", "BASE_API_URL", "\"https://7a0ec002-c05a-4566-9c92-e2c998dc052f.mock.pstmn.io\""
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
